@@ -1,5 +1,4 @@
 import discord
-from toLog import store_server_info
 from discord.ext import commands
 
 class Reactions(commands.Cog):

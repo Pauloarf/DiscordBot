@@ -3,6 +3,7 @@ import os
 import discord
 import logging
 import logging.handlers
+from toLog import store_server_info
 from dotenv import load_dotenv
 from discord.ext import commands
 from help import CustomHelpCommand
@@ -55,6 +56,7 @@ async def on_ready():
     print(f"{bot.user} has connected to Discord!")
     print(f"The bot is currently in {len(bot.guilds)} guilds.")
     print(f"More info in the Servers_info.log file")
+    store_server_info(bot)
    # for guild in bot.guilds:
     #    if guild.name == "Gunada":
      #       embed = discord.Embed(title='Updates')
